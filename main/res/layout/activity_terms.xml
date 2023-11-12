@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TermsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="502dp"
+        android:fontFamily="@font/tae"
+        android:textSize="17dp"
+        android:text="동의보감 - 기본 이용약관\n\n
+1. 회원 가입 및 이용약관\n
+-본 서비스는 의약품 정보를 제공하고, 관련 커뮤니티를 운영하는 어플리케이션입니다.\n\n
+\n\n
+2. 서비스 이용\n
+-회원은 본 서비스를 통해 제공되는 의약품 정보를 활용할 수 있습니다.\n\n
+\n\n
+3. 회원의 의무\n
+-회원은 본 서비스를 이용함에 있어서 관련 법령을 준수해야 합니다.\n\n
+\n\n
+4. 개인정보 보호\n
+-동의보감은 법령에서 정한 경우를 제외하고는 회원의 개인정보를 제3자에게 제공하지 않습니다.\n
+" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:fontFamily="@font/tae"
+        android:text="동의하십니까?" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="다음으로"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="뒤로가기"
+        android:textSize="20dp" />
+
+</RelativeLayout>

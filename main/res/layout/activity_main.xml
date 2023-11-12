@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/kd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="340dp"
+        android:layout_height="311dp"
+        android:layout_below="@id/imageViewMain"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/tae"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-620dp"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:text=" 1. 의식 확인 - 눈과 귀로 심정지 및 무호흡 유무를 확인\n\n
+2. 도움 및 119신고 요청 - 주변사람에게(꼭 집어서) 119신고를 부탁하고 자동심장충격기를 요청\n\n
+3. 기도 확보하기 - 턱을 위로 밀어서 고개를 뒤로 젖힌다.\n\n
+4. CPR 위치 찾기 - 가슴뼈의 가운데 또는  명치에서 조금 윗 부분을 압박\n\n
+5. CPR 하는 법 - 손바닥을 펴고 반대 손으로 깍지를 껴서 준비.\n\n
+*흉부 압박 시 양팔이 굽지 않게 쭉 핀 상태로 흉부와 수직이 되게 분당 100~120회 압박\n\n
+*숫자30회 마다 코를 막고 2회 정도 숨을 불어넣기
+" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="437dp"
+        android:backgroundTint="#DDC094"
+        android:drawableBottom="@android:drawable/ic_dialog_map"
+        android:fontFamily="@font/tae"
+        android:text="지도"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#DDC094"
+        android:drawableBottom="@android:drawable/ic_popup_reminder"
+        android:fontFamily="@font/tae"
+        android:text="알람"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="#DDC094"
+        android:drawableBottom="@android:drawable/ic_menu_search"
+        android:fontFamily="@font/tae"
+        android:text="약 검색"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/button3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-81dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#DDC094"
+        android:drawableBottom="@android:drawable/ic_menu_manage"
+        android:fontFamily="@font/tae"
+        android:text="설정"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</RelativeLayout>

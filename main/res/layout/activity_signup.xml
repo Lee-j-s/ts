@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/tae"
+        android:hint="아이디 입력"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonCheckDuplicate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="중복확인"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/tae"
+        android:hint="비밀번호 입력"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="205dp"
+        android:fontFamily="@font/tae"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="270dp"
+        android:fontFamily="@font/tae"
+        android:hint="이름 입력"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTextDOB"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="335dp"
+        android:fontFamily="@font/tae"
+        android:hint="생년월일 (8자리) 입력"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="가입"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="뒤로가기"
+        android:textSize="20dp" />
+
+</RelativeLayout>
