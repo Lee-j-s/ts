@@ -11,6 +11,7 @@
 
 ### 메인페이지
 메인페이지는 글로된 cpr이랑 지도,알람,약 검색, 설정이 있습니다
+
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/d6a9b379-5a3a-49ea-99cf-a4eaf74c2f23.png" width="150">
 
 
