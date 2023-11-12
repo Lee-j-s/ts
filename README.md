@@ -6,7 +6,6 @@
  <img src="https://github.com/Lee-j-s/ts/assets/143480547/4afda297-47ec-4e3c-8fcf-51eac0031736.png" width="150">
  <img src="https://github.com/Lee-j-s/ts/assets/143480547/2e854237-19b6-45b5-a9e9-0bd52713f296).png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/f010edff-5326-48bd-8ff0-230d0e121d1d.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/b83bf4d8-05cb-45f2-8285-d3417a51fa25.png" width="150">
 
 
 
