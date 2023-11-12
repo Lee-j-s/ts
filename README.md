@@ -10,4 +10,4 @@
 #### 약국 검색
 * 사용자의 현재 위치 확인 gps 마크 버튼을 사용하여 자신의 위치를 찾을수있게 됩니다. 그리고 주변에 어떤 약국들이 있는지 보이게 됩니다.
 * ![image](https://github.com/Lee-j-s/ts/assets/143480547/5e78b3e4-1144-44c1-b59a-071c030af0a8)
-![KakaoTalk_20231113_013637465_01](https://github.com/Lee-j-s/ts/assets/143480547/df624a58-d578-4cec-9cd5-08f6391bc760)
+* ![1](https://github.com/Lee-j-s/ts/assets/143480547/31404ff9-7818-4167-bcdf-ac106251bacf)
