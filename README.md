@@ -10,7 +10,7 @@
 
 
 ### 메인페이지
-메인페이지는 글로된 cpr이랑 지도,알람,약 검색, 설정이 있습니다
+메인페이지는  cpr이랑 지도,알람,약 검색, 설정이 있습니다
 
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/d6a9b379-5a3a-49ea-99cf-a4eaf74c2f23.png" width="150">
 
@@ -19,3 +19,8 @@
 #### 약국 검색
 * 사용자의 현재 위치 확인 gps 마크 버튼을 사용하여 자신의 위치를 찾을수있게 됩니다. 그리고 주변에 어떤 약국들이 있는지 보이게 됩니다.
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/5e78b3e4-1144-44c1-b59a-071c030af0a8.png" width="150">
+
+
+##### 약 검색
+약 검색은 색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
+<img src=https://github.com/Lee-j-s/ts/assets/143480547/51e00fc7-e6f5-4315-ba4e-7e3b91750001.png" width="150">
