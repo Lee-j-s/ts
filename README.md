@@ -23,4 +23,4 @@
 
 ##### 약 검색
 약 검색은 색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
-<img src=https://github.com/Lee-j-s/ts/assets/143480547/51e00fc7-e6f5-4315-ba4e-7e3b91750001.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/51e00fc7-e6f5-4315-ba4e-7e3b91750001.png" width="150">
