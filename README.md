@@ -26,6 +26,8 @@
 
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/51e00fc7-e6f5-4315-ba4e-7e3b91750001.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/b9d4faef-40fe-4084-9768-9a739978c5b4.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/7482d287-e1ab-4bc7-8827-befd89ae0da2.png" 
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/7482d287-e1ab-4bc7-8827-befd89ae0da2.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/07b154ec-5eb4-4250-bd29-644e55f57ec7.png" 
+ width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/61344b28-4195-4b04-9717-44f7b906947b.png" 
+width="150">
