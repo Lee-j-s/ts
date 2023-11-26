@@ -3,9 +3,10 @@
 아이디를 회원가입 하기 전에 이용약간을 해야하는 창이 뜹니다. 동의하십니까?에 체크를 하지 않으면 다음으로 넘어가지 않습니다. 비밀번호는 일치하지 않으면 오류가 뜨고 특수문자를 사용해야 합니다.
 
 
- <img src="https://github.com/Lee-j-s/ts/assets/143480547/4afda297-47ec-4e3c-8fcf-51eac0031736.png" width="150">
- <img src="https://github.com/Lee-j-s/ts/assets/143480547/2e854237-19b6-45b5-a9e9-0bd52713f296).png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/f010edff-5326-48bd-8ff0-230d0e121d1d.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/5cbc0ecc-201d-451d-ae0b-232a56f2f1ed.png" width="150"
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/83bdff5d-be18-46e1-9d48-9c7164806f75.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/19aaeb83-1e9b-4d64-a7bc-bac68adc4daf.png" width="150">
+
 
 
 
