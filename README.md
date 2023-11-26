@@ -21,13 +21,9 @@
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/5e78b3e4-1144-44c1-b59a-071c030af0a8.png" width="150">
 
 
-##### 약 검색
+##### 약 모양 검색
 약 검색은 색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/584964e0-210c-46a8-b661-1fdb7ce6bffe.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/5221778d-9688-41b8-a809-66cc1c421084.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/0b682dd5-17ea-4204-84f9-343b91c7ba75.png" width="150">
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/51e00fc7-e6f5-4315-ba4e-7e3b91750001.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/b9d4faef-40fe-4084-9768-9a739978c5b4.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/7482d287-e1ab-4bc7-8827-befd89ae0da2.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/07b154ec-5eb4-4250-bd29-644e55f57ec7.png" 
- width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/61344b28-4195-4b04-9717-44f7b906947b.png" 
-width="150">
