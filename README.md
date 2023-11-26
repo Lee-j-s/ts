@@ -13,8 +13,7 @@
 ### 메인페이지
 메인페이지는  cpr이랑 지도,알람,약 모양 검색, 약 이름 검색이 있습니다
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/f86ea3b6-8729-49a5-a87c-9c59f2e46a3e.png" width="150">
-
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/0215879a-d09f-4920-9897-e7100933824a.png" width="150">
 
 
 #### 약국 검색
