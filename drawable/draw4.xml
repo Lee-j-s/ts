@@ -1,0 +1,14 @@
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <!-- 아래는 이미지를 추가하고 패딩을 설정하는 예제입니다. -->
+    <item
+        android:top="10dp"
+        android:bottom="10dp"
+        android:right="10dp"
+        android:left="10dp"
+        android:drawable="@drawable/kda1">
+    </item>
+
+
+</layer-list>

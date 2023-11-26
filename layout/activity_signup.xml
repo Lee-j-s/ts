@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kddk"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/tae"
+        android:hint="아이디 입력"
+        android:textColorHint="@color/black"
+        android:textSize="17dp" />
+
+    <ImageButton
+        android:id="@+id/buttonCheckDuplicate"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/check" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/tae"
+        android:hint="비밀번호 입력"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="205dp"
+        android:fontFamily="@font/tae"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="270dp"
+        android:fontFamily="@font/tae"
+        android:hint="이름 입력"
+        android:textColorHint="@color/black"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/editTextDOB"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="335dp"
+        android:fontFamily="@font/tae"
+        android:hint="생년월일 (8자리) 입력"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textSize="17dp" />
+
+    <ImageButton
+        android:id="@+id/buttonSignUp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="가입" />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="420dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/buttonCancel"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="475dp"
+        android:backgroundTint="#DDC094"
+        android:fontFamily="@font/tae"
+        android:text="뒤로가기" />
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="475dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back" />
+
+</RelativeLayout>
