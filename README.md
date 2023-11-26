@@ -38,7 +38,7 @@
 ######  알람
 알람기능을 만들어 식후에 먹어야하는 약들이 있어서 자신이 시간을 정하면 그 시간에 알람이 울리는 기능을 만들었습니다. 
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/4050600f-3086-4a81-932e-c759b9dcc6b1.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/01872128-66a6-4f1f-bcdf-53008228d613.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/aa81ecb6-6e96-43af-9ef4-0cef0ff853c0.png" width="150">
 
 
