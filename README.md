@@ -30,3 +30,16 @@
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/5221778d-9688-41b8-a809-66cc1c421084.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/0b682dd5-17ea-4204-84f9-343b91c7ba75.png" width="150">
 
+###### 약 이름 검색
+약 이름검색은 공공데이터포털 key를 가져와서 검색을 만들었습니다. 원하는 약이름을 검색 하면 품목명,업소명,분류명,전문/일반 구분: 일반의약품이 뜹니다.
+
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/68b0a2f4-b05e-4f9a-96d5-cf770b127e00.png" width="150">
+
+######  알람
+알람기능을 만들어 식후에 먹어야하는 약들이 있어서 자신이 시간을 정하면 그 시간에 알람이 울리는 기능을 만들었습니다. 
+
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/4050600f-3086-4a81-932e-c759b9dcc6b1.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/aa81ecb6-6e96-43af-9ef4-0cef0ff853c0.png" width="150">
+
+
+
