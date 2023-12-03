@@ -13,7 +13,7 @@
 ### 메인페이지
 메인페이지는  cpr이랑 지도,알람,약 모양 검색, 약 이름 검색이 있습니다
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/0215879a-d09f-4920-9897-e7100933824a.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/2738988f-91fb-41fb-a233-2566b3eecf09.png" width="150">
 
 
 #### 약국 검색
@@ -25,7 +25,6 @@
 약 검색은 이름(품목명),색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
 색상,모양,제형 버튼을 클릭하고 식별표시에 글씨를 쓰고 검색초기화 버튼을 누르면 초기화가 됩니다.
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/2738988f-91fb-41fb-a233-2566b3eecf09.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/6d42c44e-f101-44f3-8e68-d51a01b5fc2a.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/0b682dd5-17ea-4204-84f9-343b91c7ba75.png" width="150">
 
