@@ -19,6 +19,5 @@
         map:uiRotateGestures="true"
         map:cameraTilt="30" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

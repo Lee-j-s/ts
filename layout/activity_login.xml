@@ -49,8 +49,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/login"
         android:fontFamily="@font/tae"
-        android:onClick="onLoginButtonClick"
-        android:textSize="20dp" />
+        android:onClick="onLoginButtonClick" />
 
     <Button
         android:id="@+id/buttonGoToSignUp"
@@ -59,9 +58,7 @@
         android:layout_below="@id/buttonLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:background="@drawable/sign"
-        android:fontFamily="@font/tae"
-        android:textSize="20dp" />
+        android:background="@drawable/sign" />
 
 
 

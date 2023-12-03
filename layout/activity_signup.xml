@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/kddk"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".SignUpActivity">
@@ -19,21 +18,13 @@
         android:textColorHint="@color/black"
         android:textSize="17dp" />
 
-    <ImageButton
+    <Button
         android:id="@+id/buttonCheckDuplicate"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:background="@drawable/check"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp" />
-
-    <ImageView
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/check" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -78,44 +69,20 @@
         android:textColorHint="@color/black"
         android:textSize="17dp" />
 
-    <ImageButton
+    <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="420dp"
-        android:backgroundTint="#DDC094"
-        android:fontFamily="@font/tae"
-        android:text="가입" />
+        android:background="@drawable/up" />
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-
-        android:layout_marginTop="420dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/up" />
-
-    <ImageButton
+    <Button
         android:id="@+id/buttonCancel"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="475dp"
-        android:backgroundTint="#DDC094"
-        android:fontFamily="@font/tae"
-        android:text="뒤로가기" />
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="475dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/back" />
+        android:background="@drawable/back" />
 
 </RelativeLayout>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/kddk"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".TermsActivity">
@@ -39,46 +38,21 @@
         android:fontFamily="@font/tae"
         android:text="동의하십니까?" />
 
-    <ImageButton
+    <Button
         android:id="@+id/buttonNext"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="420dp"
-        android:backgroundTint="#DDC094"
-        android:fontFamily="@font/tae"
-        android:text="다음으로"
-        android:textSize="20dp" />
+        android:background="@drawable/next" />
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="420dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/next" />
 
-    <ImageButton
+    <Button
         android:id="@+id/buttonBack"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="470dp"
-        android:backgroundTint="#DDC094"
-        android:fontFamily="@font/tae"
-        android:text="뒤로가기"
-        android:textSize="20dp" />
-
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="470dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/back" />
+        android:layout_marginTop="480dp"
+        android:background="@drawable/back"/>
 
 </RelativeLayout>
