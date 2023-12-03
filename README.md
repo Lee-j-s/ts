@@ -21,19 +21,15 @@
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/5e78b3e4-1144-44c1-b59a-071c030af0a8.png" width="150">
 
 
-##### 약 모양 검색
-약 검색은 색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
+##### 약 모양,이름 검색
+약 검색은 이름(품목명),색상,모양,제형으로 나눠진 모양 검색이랑 식별 표시로 검색이 있습니다. 
 색상,모양,제형 버튼을 클릭하고 식별표시에 글씨를 쓰고 검색초기화 버튼을 누르면 초기화가 됩니다.
 
-
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/584964e0-210c-46a8-b661-1fdb7ce6bffe.png" width="150">
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/5221778d-9688-41b8-a809-66cc1c421084.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/2738988f-91fb-41fb-a233-2566b3eecf09.png" width="150">
+<img src="https://github.com/Lee-j-s/ts/assets/143480547/6d42c44e-f101-44f3-8e68-d51a01b5fc2a.png" width="150">
 <img src="https://github.com/Lee-j-s/ts/assets/143480547/0b682dd5-17ea-4204-84f9-343b91c7ba75.png" width="150">
 
-###### 약 이름 검색
-약 이름검색은 공공데이터포털 key를 가져와서 검색을 만들었습니다. 원하는 약이름을 검색 하면 품목명,업소명,분류명,전문/일반 구분: 일반의약품이 뜹니다.
 
-<img src="https://github.com/Lee-j-s/ts/assets/143480547/68b0a2f4-b05e-4f9a-96d5-cf770b127e00.png" width="150">
 
 ######  알람
 알람기능을 만들어 식후에 먹어야하는 약들이 있어서 자신이 시간을 정하면 그 시간에 알람이 울리는 기능을 만들었습니다. 
