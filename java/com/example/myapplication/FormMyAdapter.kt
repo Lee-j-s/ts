@@ -133,9 +133,9 @@ class FormMyAdapter internal constructor(
         //공공데이터 파싱을 위한 주소
         //약국 공공데이터 서비스키
         val key =
-            "gyhnkvw8BuHNtPGQzXT5Nluh3Ri3hGlcpEnheMdjI1gjDbZhPSEpy05ofIMaFu2a96c%2FUX%2FzOVblYrTa%2B%2Fu%2Bjg%3D%3D"
+            "uyOvRzyDMGTEG8mac1aNFXB3unbuGHZkcVjILOLZDTKL9Ms5HqC%252FllygMJFyFW6QDt36muYkBKmAEtWxPzjvTg%253D%253D"
         val requestUrl =
-            ("http://apis.data.go.kr/1471057/MdcinPrductPrmisnInfoService/getMdcinPrductItem?ServiceKey=" //요청 URL
+            ("https://apis.data.go.kr/1471000/DrugPrdtPrmsnInfoService04/getDrugPrdtPrmsnInq04?" //요청 URL
                     + key + "&item_name=" + searchString) //약 이름으로 검색
         Log.e("drugSearch : ", requestUrl)
         try {

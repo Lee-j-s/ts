@@ -16,6 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 data class UserData(
     val username: String,
@@ -42,6 +43,7 @@ interface MyApi {
 
     @POST("checkDuplicate")
     fun checkDuplicateUsername(@Body checkDuplicateData: CheckDuplicateData): Call<ApiResponse>
+
 }
 
 class SignUpActivity : AppCompatActivity() {
@@ -57,13 +59,13 @@ class SignUpActivity : AppCompatActivity() {
         val editTextConfirmPassword = findViewById<EditText>(R.id.editTextConfirmPassword)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http:/ec2-3-37-128-247.ap-northeast-2.compute.amazonaws.com:3306")
+            .baseUrl("http://ec2-13-125-242-73.ap-northeast-2.compute.amazonaws.com:3306")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val api = retrofit.create(MyApi::class.java)
 
-        val buttonSignUp = findViewById<ImageButton>(R.id.buttonSignUp)
+        val buttonSignUp = findViewById<Button>(R.id.buttonSignUp)
         buttonSignUp.setOnClickListener {
             val username = editTextUsername.text.toString()
             val password = editTextPassword.text.toString()
@@ -138,14 +140,14 @@ class SignUpActivity : AppCompatActivity() {
             })
         }
 
-        val buttonCancel = findViewById<ImageButton>(R.id.buttonCancel)
+        val buttonCancel = findViewById<Button>(R.id.buttonCancel)
         buttonCancel.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
         // 중복 확인 버튼 클릭 이벤트 핸들러 추가
-        val buttonCheckDuplicate = findViewById<ImageButton>(R.id.buttonCheckDuplicate)
+        val buttonCheckDuplicate = findViewById<Button>(R.id.buttonCheckDuplicate)
         buttonCheckDuplicate.setOnClickListener {
             val username = editTextUsername.text.toString()
 

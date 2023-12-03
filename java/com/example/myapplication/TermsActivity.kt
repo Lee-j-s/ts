@@ -20,7 +20,7 @@ class TermsActivity : AppCompatActivity() {
 
 
         val checkBoxAgree = findViewById<CheckBox>(R.id.checkBoxAgree) // CheckBox 찾아오기
-        val buttonNext = findViewById<ImageButton>(R.id.buttonNext)
+        val buttonNext = findViewById<Button>(R.id.buttonNext)
 
         buttonNext.setOnClickListener {
             if (checkBoxAgree.isChecked) {
@@ -35,7 +35,7 @@ class TermsActivity : AppCompatActivity() {
                 alertDialogBuilder.show()// 이용약관에 동의하지 않은 경우, 사용자에게 알려주는 코드를 작성할 수 있습니다.
             }
         }
-        val buttonBack = findViewById<ImageButton>(R.id.buttonBack)
+        val buttonBack = findViewById<Button>(R.id.buttonBack)
         buttonBack.setOnClickListener {
             finish() // 현재 액티비티를 종료하여 이전 화면으로 돌아갑니다.
         }

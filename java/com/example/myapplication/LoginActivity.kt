@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
             val password = editTextPassword.text.toString()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://ec2-3-37-128-247.ap-northeast-2.compute.amazonaws.com:3306") // 실제 서버 URL로 변경
+                .baseUrl("http://ec2-13-125-242-73.ap-northeast-2.compute.amazonaws.com:3306") // 실제 서버 URL로 변경
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 

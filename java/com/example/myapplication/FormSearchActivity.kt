@@ -20,6 +20,7 @@ class FormSearchActivity : AppCompatActivity() {
     private var searchmarkback: String? = null
     private var linearLayoutManager: LinearLayoutManager? = null
     private var drug_result: TextView? = null
+    private var itemName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +32,11 @@ class FormSearchActivity : AppCompatActivity() {
         choosetype = intent.getStringExtra("choosetype")
         searchmarkfront = intent.getStringExtra("searchmarkfront")
         searchmarkback = intent.getStringExtra("searchmarkback")
+        itemName = intent.getStringExtra("item_name")
 
         Log.e(
             "result : ",
-            "$choosecolor/ $chooseshape/ $choosetype/$searchmarkfront/$searchmarkback"
+            "$choosecolor/ $chooseshape/ $choosetype/$searchmarkfront/$searchmarkback/$itemName"
         )
 
         list = ArrayList()
@@ -71,8 +73,12 @@ class FormSearchActivity : AppCompatActivity() {
 
                     val markFrontMatches = searchmarkfront == null || searchmarkfront == jsonObject.getString("표시앞")
                     val markBackMatches = searchmarkback == null || searchmarkback == jsonObject.getString("표시뒤")
+                    //이거바꿨음
+                    val itemNameMatches =
+                        itemName.isNullOrEmpty() || jsonObject.getString("품목명").contains(itemName!!)
 
-                    if (colorMatches && shapeMatches && typeMatches && markFrontMatches && markBackMatches) {
+
+                    if (colorMatches && shapeMatches && typeMatches && markFrontMatches && markBackMatches && itemNameMatches) {
                         addDrugToList(jsonObject)
                     }
                 }
@@ -82,7 +88,6 @@ class FormSearchActivity : AppCompatActivity() {
         }
     }
 
-
     private fun addDrugToList(jsonObject: JSONObject) {
         val formDrug = FormDrug().apply {
             image = jsonObject.getString("큰제품이미지")
@@ -90,9 +95,6 @@ class FormSearchActivity : AppCompatActivity() {
             company = jsonObject.getString("업소명")
             className = jsonObject.getString("분류명")
             etcOtcName = jsonObject.getString("전문일반구분")
-
-
-
         }
         list!!.add(formDrug)
     }

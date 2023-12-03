@@ -44,10 +44,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(mapIntent)
         }
 
-        binding.button4.setOnClickListener {
-            val nameMainIntent = Intent(this, NameMainActivity::class.java)
-            startActivity(nameMainIntent)
-        }
         // 추가: button3를 클릭하면 FormMainActivity로 이동
         binding.button3.setOnClickListener {
             startActivity(FormMainIntent)

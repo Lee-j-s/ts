@@ -1,9 +1,9 @@
 package com.example.myapplication
 
 data class Pharmacy(
-    val longitude: Double,
+    val Longitude: Double,
     val address: String,
-    val latitude: Double,
+    val Latitude: Double,
     val name: String,
     val no: Int
 )

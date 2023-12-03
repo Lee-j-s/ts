@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Color
@@ -22,6 +23,7 @@ class FormMainActivity : AppCompatActivity() {
     private var choosetype: String? = null // 선택한 제형 저장
     private var searchmarkfront: String? = null // 식별자 검색 저장(앞)
     private var searchmarkback: String? = null // 식별자 검색 저장(뒤)
+    private var itemName: String? = null
 
     //색상 버튼과 관련
     var colorBtn = arrayOfNulls<Button>(16) //색상 버튼 배열
@@ -40,9 +42,13 @@ class FormMainActivity : AppCompatActivity() {
     var result_typebtn: Button? = null //버튼의 id값 저장
     private var typebtn_id: String? = null //버튼의 id값
     private var thistype: String? = null // 비교할 색상 값
+
     var textcolor: TextView? = null
     var textshape: TextView? = null
     var texttype: TextView? = null
+    var itemNameEditText: EditText? = null
+
+    @SuppressLint("MissingInflatedId")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +59,7 @@ class FormMainActivity : AppCompatActivity() {
         textcolor = findViewById<View>(R.id.choosecolor) as TextView
         textshape = findViewById<View>(R.id.chooseshape) as TextView
         texttype = findViewById<View>(R.id.choosetype) as TextView
+        itemNameEditText = findViewById(R.id.item_name_edittext)
 
         //로딩중 progressdialog
         //  progressDialog = new ProgressDialog(this);
@@ -69,34 +76,129 @@ class FormMainActivity : AppCompatActivity() {
 
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ//
     //색상 버튼 이벤트
+    // 색상 버튼 이벤트
+    // 색상 버튼 이벤트
     fun settingColorbtn() {
         for (i in colorBtn.indices) {
-            colorbtn_id = "color_btn" + (i + 1) //버튼 아이디값 저장
-            colorBtn[i] =
-                findViewById(resources.getIdentifier(colorbtn_id, "id", packageName)) //버튼 초기화
+            colorbtn_id = "color_btn" + (i + 1) // 버튼 아이디값 저장
+            colorBtn[i] = findViewById(resources.getIdentifier(colorbtn_id, "id", packageName)) // 버튼 초기화
         }
+
+        var prevColorBtn: Button? = null // 이전에 선택한 색상 버튼
+
         for (buttonId in colorBtn) {
             buttonId!!.setOnClickListener { v ->
                 result_colorbtn = findViewById(v.id)
                 result_colorbtn?.run {
-                    setBackgroundResource(R.drawable.choose_btton) //해당아이디 버튼의 배경색을 바꿈
-                    setTextColor(Color.WHITE)
                     choosecolor = getText().toString()
-                } //선택 색상을 저장
+                    // 선택한 버튼의 백그라운드를 변경
+                    when (v.id) {
+                        R.id.color_btn1 -> {
+                            setBackgroundColor(Color.WHITE) // 버튼1의 백그라운드를 하양색으로 변경
+                        }
+                        R.id.color_btn2 -> {
+                            setBackgroundColor(Color.YELLOW) // 버튼2의 백그라운드를 노란색으로 변경
+                        }
+                        R.id.color_btn3 -> {
+                            setBackgroundColor(Color.parseColor("#FFA500")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn4 -> {
+                            setBackgroundColor(Color.parseColor("#FF99CC")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn5 -> {
+                            setBackgroundColor(Color.parseColor("#FF0000")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn6 -> {
+                            setBackgroundColor(Color.parseColor("#663300")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn7 -> {
+                            setBackgroundColor(Color.parseColor("#99FF99")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn8 -> {
+                            setBackgroundColor(Color.parseColor("#339933")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn9 -> {
+                            setBackgroundColor(Color.parseColor("#006666")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn10 -> {
+                            setBackgroundColor(Color.parseColor("#0033FF")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn11 -> {
+                            setBackgroundColor(Color.parseColor("#003399")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn12 -> {
+                            setBackgroundColor(Color.parseColor("#660000")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn13 -> {
+                            setBackgroundColor(Color.parseColor("#663399")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn14 -> {
+                            setBackgroundColor(Color.parseColor("#C5C5C5")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
+                        R.id.color_btn15 -> {
+                            setBackgroundColor(Color.parseColor("#000000")) // 버튼3의 백그라운드를 주황색으로 변경
+                        }
 
-                //////여기서 for문으로 thiscolor랑 result.getText.toString()비교해서 배경색 다시 바꿔주기
-                Log.e("다음 클릭 후 : ", thiscolor!!)
-                for (j in colorBtn.indices) {
-                    if (colorBtn[j]!!.text.toString() != choosecolor) {
-                        colorBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
-                        colorBtn[j]!!.setTextColor(Color.BLACK)
+
+
                     }
-                    if (colorBtn[j]!!.text.toString() == thiscolor) {
-                        colorBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
-                        colorBtn[j]!!.setTextColor(Color.BLACK)
+                    setTextColor(Color.parseColor("#FFFFFF"))
+
+                    // 이전에 선택한 버튼의 색상을 되돌림
+                    prevColorBtn?.run {
+                        when (id) {
+                            R.id.color_btn1 -> {
+                                setBackgroundColor(Color.parseColor("#FFFFFF")) // 버튼1의 백그라운드를 하양색으로 변경
+                            }
+                            R.id.color_btn2 -> {
+                                setBackgroundColor(Color.parseColor("#FFFF00")) // 버튼2의 백그라운드를 노란색으로 변경
+                            }
+                            R.id.color_btn3 -> {
+                                setBackgroundColor(Color.parseColor("#FFA500")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn4 -> {
+                                setBackgroundColor(Color.parseColor("#FF99CC")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn5 -> {
+                                setBackgroundColor(Color.parseColor("#FF0000")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn6 -> {
+                                setBackgroundColor(Color.parseColor("#663300")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn7 -> {
+                                setBackgroundColor(Color.parseColor("#99FF99")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn8 -> {
+                                setBackgroundColor(Color.parseColor("#339933")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn9 -> {
+                                setBackgroundColor(Color.parseColor("#006666")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn10 -> {
+                                setBackgroundColor(Color.parseColor("#0033FF")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn11 -> {
+                                setBackgroundColor(Color.parseColor("#003399")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn12 -> {
+                                setBackgroundColor(Color.parseColor("#660000")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn13 -> {
+                                setBackgroundColor(Color.parseColor("#663399")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn14 -> {
+                                setBackgroundColor(Color.parseColor("#C5C5C5")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                            R.id.color_btn15 -> {
+                                setBackgroundColor(Color.parseColor("#000000")) // 버튼3의 백그라운드를 주황색으로 변경
+                            }
+                        }
+                        setTextColor(Color.parseColor("#000000"))
                     }
                 }
-                thiscolor = textcolor!!.text.toString()
+
+                // 현재 선택한 버튼을 이전에 선택한 버튼으로 저장
+                prevColorBtn = result_colorbtn
             }
         }
     }
@@ -104,31 +206,129 @@ class FormMainActivity : AppCompatActivity() {
     // 모양 버튼 이벤트
     fun settingShapebtn() {
         for (i in shapeBtn.indices) {
-            shapebtn_id = "shape_btn" + (i + 1) //버튼 아이디값 저장
-            shapeBtn[i] = findViewById(resources.getIdentifier(shapebtn_id, "id", packageName))
+            shapebtn_id = "shape_btn" + (i + 1) // 버튼 아이디값 저장
+            shapeBtn[i] = findViewById(resources.getIdentifier(shapebtn_id, "id", packageName)) // 버튼 초기화
         }
+
+        var prevShapeBtn: Button? = null // 이전에 선택한 색상 버튼
+
         for (buttonId in shapeBtn) {
             buttonId!!.setOnClickListener { v ->
                 result_shapebtn = findViewById(v.id)
                 result_shapebtn?.run {
-                    setBackgroundResource(R.drawable.choose_btton) //해당아이디 버튼의 배경색을 하양으로 바꿈
-                    setTextColor(Color.WHITE)
                     chooseshape = getText().toString()
-                }
-                Log.e("다음 클릭 후 : ", thisshape!!)
-                for (j in shapeBtn.indices) {
-                    if (shapeBtn[j]!!.text.toString() != chooseshape) {
-                        shapeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
-                        shapeBtn[j]!!.setTextColor(Color.BLACK)
+                    // 선택한 버튼의 백그라운드를 변경
+                    when (v.id) {
+                        0 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e1)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        1 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e2)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        2 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e3)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        3 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e4)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        4 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e5)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        5 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e6)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        6 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e7)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        7 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e8)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        8 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e9)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        9 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e10)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        10 -> {
+                            shapeBtn[id]!!.setBackgroundResource(R.drawable.e11)
+                            colorBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        else -> {
+                            // 나머지 버튼에 대한 처리를 추가할 수 있습니다.
+                        }
+
+
+
                     }
-                    if (shapeBtn[j]!!.text.toString() == thisshape) {
-                        shapeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
-                        shapeBtn[j]!!.setTextColor(Color.BLACK)
+                    setTextColor(Color.parseColor("#FFFFFF"))
+
+                    // 이전에 선택한 버튼의 색상을 되돌림
+                    prevShapeBtn?.run {
+                        when (id) {
+                            0 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e1)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            1 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e2)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            2 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e3)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            3 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e4)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            4 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e5)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            5 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e6)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            6 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e7)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            7 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e8)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            8 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e9)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            9 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e10)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            10 -> {
+                                shapeBtn[id]!!.setBackgroundResource(R.drawable.e11)
+                                colorBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            else -> {
+                                // 나머지 버튼에 대한 처리를 추가할 수 있습니다.
+                            }
+                        }
+                        setTextColor(Color.parseColor("#000000"))
                     }
                 }
 
-                //  textcolor.setText(result.getText()); // 선택 색상을 보여줄 textview
-                thisshape = textshape!!.text.toString()
+                // 현재 선택한 버튼을 이전에 선택한 버튼으로 저장
+                prevShapeBtn = result_shapebtn
             }
         }
     }
@@ -139,14 +339,57 @@ class FormMainActivity : AppCompatActivity() {
             typebtn_id = "type_btn" + (i + 1) //버튼 아이디값 저장
             typeBtn[i] = findViewById(resources.getIdentifier(typebtn_id, "id", packageName)) //초기화
         }
+        var prevTypeBtn: Button? = null
         for (buttonId in typeBtn) {
             buttonId!!.setOnClickListener { v ->
                 result_typebtn = findViewById(v.id)
                 result_typebtn?.run {
-                    setBackgroundResource(R.drawable.choose_btton) //해당아이디 버튼의 배경색을 하양으로 바꿈
-                    setTextColor(Color.WHITE)
                     choosetype = getText().toString()
+                    when (id) {
+                        0 -> {
+                            typeBtn[id]!!.setBackgroundResource(R.drawable.r1)
+                            typeBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        1 -> {
+                            typeBtn[id]!!.setBackgroundResource(R.drawable.r2)
+                            typeBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        2 -> {
+                            typeBtn[id]!!.setBackgroundResource(R.drawable.r3)
+                            typeBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+                        3 -> {
+                            typeBtn[id]!!.setBackgroundResource(R.drawable.r4)
+                            typeBtn[id]!!.setTextColor(Color.BLACK)
+                        }
+
+                    }
+                    setTextColor(Color.parseColor("#FFFFFF"))
+
+                    prevTypeBtn?.run {
+                        when (id) {
+                            0 -> {
+                                typeBtn[id]!!.setBackgroundResource(R.drawable.r1)
+                                typeBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            1 -> {
+                                typeBtn[id]!!.setBackgroundResource(R.drawable.r2)
+                                typeBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            2 -> {
+                                typeBtn[id]!!.setBackgroundResource(R.drawable.r3)
+                                typeBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                            3 -> {
+                                typeBtn[id]!!.setBackgroundResource(R.drawable.r4)
+                                typeBtn[id]!!.setTextColor(Color.BLACK)
+                            }
+                        }
+                        setTextColor(Color.parseColor("#000000"))
+                    }
                 }
+                prevTypeBtn = result_typebtn
+
                 if (choosetype!!.contains("정")) {
                     choosetype =
                         "나정, 필름코팅정, 서방정, 저작정, 추어블정(저작정), 구강붕해정, 서방성필름코팅정, 장용성필름코팅정, 다층정, 분산정(현탁정), 정제"
@@ -164,38 +407,38 @@ class FormMainActivity : AppCompatActivity() {
                 for (j in typeBtn.indices) {
                     if (typeBtn[j]!!.text.toString().contains("정")) {
                         if (!choosetype!!.contains("정")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                         if (thisshape!!.contains("정")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                     } else if (typeBtn[j]!!.text.toString().contains("경질")) {
                         if (!choosetype!!.contains("경질")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                         if (thisshape!!.contains("경질")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                     } else if (typeBtn[j]!!.text.toString().contains("연질")) {
                         if (!choosetype!!.contains("연질")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                         if (thisshape!!.contains("연질")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                     } else {
                         if (!choosetype!!.contains("껌제")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                         if (thisshape!!.contains("제")) {
-                            typeBtn[j]!!.setBackgroundResource(R.drawable.basic_button)
+
                             typeBtn[j]!!.setTextColor(Color.BLACK)
                         }
                     }
@@ -228,6 +471,15 @@ class FormMainActivity : AppCompatActivity() {
             searchmarkback
         }
     }
+    private fun takeItemName() {
+        itemName = itemNameEditText?.text.toString().trim()
+        itemName = if (itemName.isNullOrEmpty()) {
+            null
+        } else {
+            itemName
+        }
+    }
+
 
     // 검색을 수행하는 메서드
     private fun performSearch() {
@@ -248,6 +500,9 @@ class FormMainActivity : AppCompatActivity() {
         intent.putExtra("searchmarkfront", searchmarkfront)
         intent.putExtra("searchmarkback", searchmarkback)
 
+        takeItemName()
+        intent.putExtra("item_name", itemName)
+
         startActivity(intent)
     }
 
@@ -265,29 +520,159 @@ class FormMainActivity : AppCompatActivity() {
         choosetype = null
         searchmarkfront = null // 식별표시 앞 부분 초기화
         searchmarkback = null // 식별표시 뒷 부분 초기화
+        itemName = null
 
         val myToast = Toast.makeText(this.applicationContext, "선택이 초기화 되었습니다.", Toast.LENGTH_SHORT)
         myToast.show()
 
         // 색상 초기화
         for (i in colorBtn.indices) {
-            colorBtn[i]!!.setBackgroundColor(Color.WHITE)
-            colorBtn[i]!!.setBackgroundResource(R.drawable.basic_button)
-            colorBtn[i]!!.setTextColor(Color.BLACK)
+            when (i) {
+                0 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                1 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#FFFF00"))
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                2 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#FFA500")) // 주황색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                3 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#FF99CC")) // 분홍색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                4 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#FF0000")) // 빨강색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                5 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#663300")) // 갈색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                6 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#99FF99")) // 연두색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                7 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#339933")) // 청록색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                8 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#006666")) // 초록색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                9 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#0033FF")) // 파랑색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                10 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#003399")) // 남색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                11 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#660000")) // 자주색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                12 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#663399")) // 보라색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                13 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#C5C5C5")) // 회색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                14 -> {
+                    colorBtn[i]!!.setBackgroundColor(Color.parseColor("#000000")) // 검정색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                15 -> {
+                    colorBtn[i]!!.setBackgroundDrawable(null) // 투명색
+                    colorBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                else -> {
+                    // 나머지 버튼에 대한 처리를 추가할 수 있습니다.
+                }
+            }
         }
+
 
         // 모양 초기화
         for (i in shapeBtn.indices) {
-            shapeBtn[i]!!.setBackgroundColor(Color.WHITE)
-            shapeBtn[i]!!.setBackgroundResource(R.drawable.basic_button)
-            shapeBtn[i]!!.setTextColor(Color.BLACK)
+            when (i) {
+                0 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e1)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                1 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e2)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                2 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e3)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                3 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e4)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                4 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e5)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                5 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e6)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                6 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e7)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                7 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e8)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                8 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e9)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                9 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e10)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                10 -> {
+                    shapeBtn[i]!!.setBackgroundResource(R.drawable.e11)
+                    shapeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                else -> {
+                    // 나머지 버튼에 대한 처리를 추가할 수 있습니다.
+                }
+
+            }
         }
 
         // 제형 초기화
         for (i in typeBtn.indices) {
-            typeBtn[i]!!.setBackgroundColor(Color.WHITE)
-            typeBtn[i]!!.setBackgroundResource(R.drawable.basic_button)
-            typeBtn[i]!!.setTextColor(Color.BLACK)
+            when (i) {
+                0 -> {
+                    typeBtn[i]!!.setBackgroundResource(R.drawable.r1)
+                    typeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                1 -> {
+                    typeBtn[i]!!.setBackgroundResource(R.drawable.r2)
+                    typeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                2 -> {
+                    typeBtn[i]!!.setBackgroundResource(R.drawable.r3)
+                    typeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+                3 -> {
+                    typeBtn[i]!!.setBackgroundResource(R.drawable.r4)
+                    typeBtn[i]!!.setTextColor(Color.BLACK)
+                }
+            }
         }
 
         // 식별표시 초기화
@@ -296,6 +681,8 @@ class FormMainActivity : AppCompatActivity() {
 
         val markback = findViewById<View>(R.id.mark_Back) as EditText
         markback.text.clear()
+
+        itemNameEditText?.text?.clear()
     }
 
     companion object {
